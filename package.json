@@ -1,0 +1,24 @@
+{
+  "name": "web-chat-backend",
+  "version": "1.0.0",
+  "description": "NodeJS chat project of MERN stack ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diego40g/Web-Chat-Backend.git"
+  },
+  "author": "Diego Paz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diego40g/Web-Chat-Backend/issues"
+  },
+  "homepage": "https://github.com/diego40g/Web-Chat-Backend#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}
