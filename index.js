@@ -1,11 +1,15 @@
 const express = require('express');
 
-const app = express()
+const config = require('./config/app');
+const app = express();
 
-const port = 3000
+const port = config.appPort;
 
 app.get('/home', (req, res) => {
     return res.send('home screen')
+})
+app.get('/login', (req, res) => {
+    return res.send('login screen')
 })
 
 app.listen(port, () => {
