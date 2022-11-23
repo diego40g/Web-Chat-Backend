@@ -9,7 +9,7 @@
     "sequelize-init": "sequelize init",
     "sequelize-migrate": "sequelize db:migrate",
     "sequelize-drop-table": "sequelize db:migrate:undo",
-    "sequelize-insert-user": "db:seed:all"
+    "sequelize-insert": "sequelize db:seed:all"
   },
   "repository": {
     "type": "git",
