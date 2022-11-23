@@ -7,10 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
     "sequelize-init": "sequelize init",
-    "sequelize-create-user": "sequelize model:create --name User --attributes firstName:string,lastName:string,email:string,password:string,gender:string,avata:string",
     "sequelize-migrate": "sequelize db:migrate",
     "sequelize-drop-table": "sequelize db:migrate:undo",
-    "sequelize-seed-users": "sequelize seed:create --name users",
     "sequelize-insert": "sequelize db:seed:all"
   },
   "repository": {
