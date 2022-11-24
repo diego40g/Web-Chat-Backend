@@ -1,5 +1,6 @@
 const User = require('../models').User
 const bcrypt = require('bcrypt')
+const e = require('express')
 const jwt = require('jsonwebtoken')
 const config = require('../config/app')
 
@@ -31,7 +32,13 @@ exports.login = async(req, res) => {
 }
 
 exports.register = async(req,res)=>{
-
+    try{
+        const user = await User.create(req.body)
+        const userWithToken=generateToken(user.get({ raw: true }))
+        return res.send(userWithToken)
+    }catch(error){
+        return res.status(500).json({ message: e.message })
+    }
 }
 
 const generateToken = (user) => {
