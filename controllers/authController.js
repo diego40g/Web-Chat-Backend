@@ -1,6 +1,7 @@
 const User = require('../models').User
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+const config = require('../config/app')
 
 exports.login = async(req, res) => {
     const { email, password } = req.body
@@ -36,6 +37,6 @@ exports.register = async(req,res)=>{
 const generateToken = (user) => {
     delete user.password
 
-    const token = jwt.sign(user, 'secret', { expiresIn: 86400 })
+    const token = jwt.sign(user, config.appKey, { expiresIn: 86400 })
     return { ...user, ...{ token }} 
 }
