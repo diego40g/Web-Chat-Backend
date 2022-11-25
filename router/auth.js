@@ -1,6 +1,7 @@
 const router = require('express').Router()
 const { login, register } = require('../controllers/authController')
 const { body } = require('express-validator')
+const { validate } = require('../validators')
 
 router.post('/login', login)
 router.post('/register', [
@@ -9,6 +10,8 @@ router.post('/register', [
     body('gender').notEmpty(),
     body('email').isEmail(),
     body('password').isLength({ min: 5 }),
+
+    validate
 ],register)
 
 module.exports = router
