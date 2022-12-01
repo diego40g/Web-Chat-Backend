@@ -25,7 +25,7 @@ module.exports = {
       gender: {
         type: Sequelize.STRING
       },
-      avata: {
+      avatar: {
         type: Sequelize.STRING
       },
       createdAt: {
