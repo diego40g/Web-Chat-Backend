@@ -7,6 +7,11 @@ exports.update = async(req, res) => {
         req.body.avatar = req.file.filename
         console.log(req.body.avatar);
     }
+
+    if (typeof req.body.avatar !== 'undefined' && 
+    req.body.avatar.length === 0){
+        delete req.body.avatar
+    }
     
     try{
         const[rows, result] = await User.update(req.body, {
