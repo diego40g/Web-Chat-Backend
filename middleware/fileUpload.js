@@ -8,9 +8,9 @@ const getFileType = (file) => {
 }
 const generateFileName = (req, file, cb) => {
     const extension = getFileType(file)
-    const filename = Date.now() + '-' +Math.round(Math.random() * 1E9) + '.' +extension
+    const filename = Date.now() + '-' + Math.round(Math.random() * 1E9) + '.' + extension
     
-    cb(null, file.fielname+ '-' +filename)
+    cb(null, file.fieldname+ '-' +filename)
 }
 const fileFilter = (req, file, cb) => {
     const extension = getFileType(file)
