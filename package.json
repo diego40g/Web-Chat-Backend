@@ -13,7 +13,8 @@
     "sequelize-seed-users": "sequelize seed:create --name users",
     "sequelize-insert": "sequelize db:seed:all",
     "sequelize-create-chat":"sequelize model:create --name Chat --attributes type:string",
-    "sequelize-create-chatUser":"sequelize model:create --name ChatUser --attributes chatId:integer,userId:integer"
+    "sequelize-create-chatUser":"sequelize model:create --name ChatUser --attributes chatId:integer,userId:integer",
+    "sequelize-create-message":"sequelize model:create --name Message --attributes type:string,message:text,chatId:integer,fromUserId:integer"
   },
   "repository": {
     "type": "git",
