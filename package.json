@@ -11,7 +11,8 @@
     "sequelize-migrate": "sequelize db:migrate",
     "sequelize-drop-table": "sequelize db:migrate:undo",
     "sequelize-seed-users": "sequelize seed:create --name users",
-    "sequelize-insert": "sequelize db:seed:all"
+    "sequelize-insert": "sequelize db:seed:all",
+    "sequelize-create-chat":"sequelize model:create --name Chat --attributes type:string"
   },
   "repository": {
     "type": "git",
