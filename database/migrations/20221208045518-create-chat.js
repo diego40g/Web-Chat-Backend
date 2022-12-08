@@ -10,15 +10,18 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       type: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        defaultValue: 'dual'
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('NOW()')
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('NOW()')
       }
     });
   },
