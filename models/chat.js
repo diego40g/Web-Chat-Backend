@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       this.belongsToMany(models.User, { through: 'ChatUSer', foreignKey: 'chatId' })
       this.hasMany(models.ChatUser, { foreignKey: 'chatId' })
+      this.hasMany(models.Message, { foreignKey: 'chatId' })
     }
   }
   Chat.init({
