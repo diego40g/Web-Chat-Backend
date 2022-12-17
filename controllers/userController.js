@@ -5,7 +5,7 @@ exports.update = async(req, res) => {
 
     if (req.file){
         req.body.avatar = req.file.filename
-        console.log(req.body.avatar);
+        //console.log(req.body.avatar);
     }
 
     if (typeof req.body.avatar !== 'undefined' && 
