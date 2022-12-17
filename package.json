@@ -12,9 +12,9 @@
     "sequelize-drop-table": "sequelize db:migrate:undo",
     "sequelize-seed-users": "sequelize seed:create --name users",
     "sequelize-insert": "sequelize db:seed:all",
-    "sequelize-create-chat":"sequelize model:create --name Chat --attributes type:string",
-    "sequelize-create-chatUser":"sequelize model:create --name ChatUser --attributes chatId:integer,userId:integer",
-    "sequelize-create-message":"sequelize model:create --name Message --attributes type:string,message:text,chatId:integer,fromUserId:integer",
+    "sequelize-create-chat": "sequelize model:create --name Chat --attributes type:string",
+    "sequelize-create-chatUser": "sequelize model:create --name ChatUser --attributes chatId:integer,userId:integer",
+    "sequelize-create-message": "sequelize model:create --name Message --attributes type:string,message:text,chatId:integer,fromUserId:integer",
     "sequelize-seed-chats": "sequelize seed:create --name chats",
     "sequelize-seed-db": "sequelize db:seed --seed 20221210035831-chats"
   },
@@ -40,6 +40,7 @@
     "nodemon": "^2.0.20",
     "pg": "^8.8.0",
     "sequelize": "^6.25.8",
-    "sequelize-cli": "^6.5.2"
+    "sequelize-cli": "^6.5.2",
+    "socket.io": "^4.5.4"
   }
 }
