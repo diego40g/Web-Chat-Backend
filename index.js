@@ -18,6 +18,11 @@ app.use(express.static(__dirname + '/uploads'))
 const port = config.appPort;
 const server = http.createServer(app)
 SocketServer(server)
+const io = require('socket.io')(server, {
+    cors: {
+        origin: '*'
+    }
+})
 
 server.listen(port, () => {
     console.log(`Server listen on port ${port}`)
