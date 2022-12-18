@@ -18,7 +18,7 @@ const SocketServer = (server) => {
                 sockets.push(socket.id)
             }
             const onlineFriends = [] //ids
-            const chatters = getChatters(user.id) //query
+            const chatters = await getChatters(user.id) //query
 
             console.log(chatters);
 
@@ -55,7 +55,7 @@ const SocketServer = (server) => {
 
 const getChatters = async (userId) => {
     try {
-        const [result, metadata] = await sequelize.query(`
+        const [results, metadata] = await sequelize.query(`
             SELECT "cu"."userId" FROM "ChatUser" as cu
             INNER JOIN (
                 SELECT "c"."id" FROM "Chats" as c
